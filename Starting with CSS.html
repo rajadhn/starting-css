@@ -1,0 +1,144 @@
+Starting with CSS.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <!--Inline styles-->
+    <h1>Create a simple page with some div tags and show different ways to add CSS as well as what happens when you target the same elements wiht inline,internal, and external CSS, also, utilize commments in the project where required.</h1>
+    <style>
+        .internal {
+            color: green;
+        }
+        .inline_internal {
+            color: red;
+        }
+        .inline_internal_external { 
+            color: aqua;
+         }
+    </style>
+    <!-- dependign on the order external wins between internal and external since I have external imported after internal -->
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+<body>
+   <div style="color: red;"> <h2>Inline</h2></div>
+   <div class="internal"><h2>Internal</h2></div>
+   <div class="external"><h2>External</h2></div>
+   <div style="color: blueviolet;" class="inline_internal"><h2>Inline+Internal</h2></div>
+   <div class="int_external internal_ext"><h2>Internal+External</h2></div> 
+   <div style="color: blueviolet;" class="inline_internal_external"><h2>Inline+Internal+External</h2></div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+<h1>Build an HTML page with multiple paragraphs, each assigned a unique class name. Write CSS rules using
+    class selectors to apply distinct styling to each paragraph. Follow the BEM naming convention and
+    explain how you've named the classes.</h1>
+    <style>
+        .main_heading {
+            color:red;
+        }
+        .main_subheading {
+            color: blue;
+        }
+        .hero_title {
+            color: green;
+        }
+        .hero_description {
+            color: brown;
+        }
+        .btn {
+            background-color: #54fa54;
+        }
+        .hero_btn-primary {
+            background-color: purple;
+            color: wheat;
+        }
+        .hero_btn-secondary {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="main"></div> 
+        <p class="main_heading"><b>This is my main heading</b></p>
+        <p class="main_subheading"><b>This is my sub heading</b></p>
+    <div class="hero">
+        <p class="hero_title"><b>This is my hero title</b></p>
+        <p class="hero_description"><b>This is my hero description</b></p>
+        <button class="btn hero_btn-primary"><b>This is my primary hero button</b></button>
+        <button class="hero_btn-secondary"><b>This is my secondary hero button</b></button>
+    </div>
+<h1>Develop an HTML form with various input elements. Use 9SS to style the form, including setting
+    background colors for input fields. 9reate a custom color palette for the form elements, and demonstrate
+    how to apply opacity to one of the form sections.</h1>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+
+    <style>
+        .firstName {
+            background-color: red;
+        }
+        .lastName {
+            background-color: green;
+        }
+        .email {
+            /* This is the property used to color checkbox checked state */
+            accent-color: violet;
+        }
+        button {
+            opacity: 50%;
+        }
+    </style>
+</head>
+<body>
+   <form>
+    <label for="firstName">First Name:
+        <input type="text" name="firstName" class="firstName" placeholder="John" id="firstName" required minlength="3" max="28"/>
+    </label>
+    <br>
+    <label  for="lastName">Last Name:
+        <input type="text" name="lastName" class="lastName" placeholder="Doe" id="lastName" required min="3" max="28"/>
+    </label>
+    <br>
+    <label for="password">password:
+        <input type="password" name="password" class="password" placeholder="*********" id="password" required min="8"/>
+    </label>
+    <br>
+    <label for="confirmpassword">confirm password:
+        <input type="password" name="confirmpassword" class="confirmPassword" placeholder="********" id="confirmPassword" required />
+    </label>
+    <br>
+    <label for="">Gender:
+        <input type="radio" id="male" value="male" name="gender" checked/>
+        <label for="male">Male</label>
+        <input type="radio" id="female" value="female" name="gender"/>
+        <label for="female">Female</label>
+        <input type="radio" id="other" value="other" name="gender"/>
+        <label for="other">Other</label>
+    </label>
+    <br>
+    <label for="terms">terms:
+        <input type="checkbox" id="terms" required class="checkbox"/> I agree to terms and conditions
+    </label>
+    <br>
+    <button type="submit">Register</button>
+   </form>
+</body>
+
+
+</html>
